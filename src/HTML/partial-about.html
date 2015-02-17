@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+    var app= angular.module('homeApp', []);
+
+    app.controller('projectsController', function($scope)
+    {
+        $scope.projectsList = [
+          {
+              project: {
+                  companyName: 'Microsoft',
+                  projectName: 'MSN & SMC'
+              },
+              Years: 2,
+              NumberOfProjects: "Two",
+              Constructors: [
+                  {locationName: "Redmond"}
+              ]
+          },
+          {
+              project: {
+                  companyName: 'T-Mobile',
+                  projectName: 'Web Sustainment'
+              },
+              Years: 3,
+              NumberOfProjects: "One",
+              Constructors: [
+                  {locationName: "Bothell"}
+              ]
+          }
+        ];
+
+    });
+
+angular.bootstrap(document.getElementById("app1"),['homeApp']);
+
+    </script>
+</head>
+<body>
+<h1 style="text-align:center;">Some Outstanding projects & Companies</h1>
+
+<div style="color:#fff;text-align:center;font-size:18px;left:30%;position:relative;">
+    <table id="app1" ng-app="homeApp">
+        <thead>
+        <tr><th colspan="4">Outstanding Projects</th></tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="proj in projectsList">
+            <td>{{$index + 1}}</td>
+            <td>
+                {{proj.project.companyName}}&nbsp;&nbsp;{{proj.project.projectName}}
+            </td>
+            <td>{{proj.Constructors[0].name}}</td>
+            <td>{{proj.Years}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div style="left:35%;position:relative;color:blue;">
+{{message}}
+</div>
+
+
+</body>
+</html>

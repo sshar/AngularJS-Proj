@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Portfolio</title>
+    <!-- Accessing angular js libraries directly rather downloadng -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css" />
+    <script src="../JS/app.js"></script>
+</head>
+
+<body ng-app="sampleApp">
+
+<nav id="sidenavbar" class="navbar navbar-inverse sidenavbar" role="navigation">
+    <div class="closeBtn" style="color:#000;float:right;margin:5px;display:block;" onclick="hideSideBar()">X</div>
+    <div style="background-color:#000;margin:20px 10px 20px 10px;padding:10px 0px;width:200px;">
+        <div style="margin:20px 0px;display:block;width:200px;text-align:center;"><img src="../IMAGES/myProfile.jpg"> </img></div>
+        <div style="margin:20px 0px;display:block;width:200px;color:#fff;text-align:center;">SHARVARI SIDDULA</div>
+        <div style="margin:20px 0px;display:block;width:200px;color:#fff;text-align:center;">Senior Developer</div>
+    </div>
+
+    <ul>
+        <li><a href="#/Home"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+        <li><a href="#/About"><span class="glyphicon glyphicon-hand-right"></span>About</a></li>
+        <li><a href="#/Contact"><span class="glyphicon glyphicon-phone"></span>Contact</a></li>
+    </ul>
+</nav>
+
+<div style="color:red">
+    <div ng-view></div>
+</div>
+
+</body>
+</html>  

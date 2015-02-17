@@ -1,0 +1,20 @@
+{
+  "todos": [
+    {
+      "text": "Learn angular",
+      "done": true
+    },
+    {
+      "text": "Build an angular app",
+      "done": false
+    },
+    {
+      "text": "something",
+      "done": false
+    },
+    {
+      "text": "another todo",
+      "done": true
+    }
+  ]
+}
